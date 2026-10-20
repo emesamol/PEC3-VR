@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+     <script src="https://unpkg.com/aframe-environment-component@1.0.0/dist/aframe-environment-component.min.js">  </script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+          <img id="textura01" src="recursos/textura01.jpg">
+          <img id="textura02" src="recursos/textura02.jpg">
+          <img id="cubs" src="recursos/imagen 360.jpg">
+        </a-assets> 
+
+        <a-sky id="image-360" radius="10" src="#cubs"></a-sky>
+
+        <a-box position="0 1.8 -4" scale="1 1 1" src="#textura01">
+
+           <a-animation scale="rotation" begin="mouseenter" to="360 0 0" dur="800" ></a-animation>
+
+        </a-box>
+
+        <a-box position="5 1.8 4" scale="1 1.5 1" src="#textura02">
+
+          <a-animation attribute="position" direction="alternate" dur="3250" repeat="indefinite" to="-5 1.8 4"></a-animation>
+
+        </a-box>
+
+
+        <a-text value="Imagen 360 grados! Bienvenido a Potsdam" color="white" position="0 3 -4" scale="2 2 1" align="center"></a-text>
+
+        <a-camera>
+          <a-cursor color="#FFFFFF"> </a-cursor>
+        </a-camera>
+
+
+    </a-scene>
+
+
+</body>
+
+
+</html>

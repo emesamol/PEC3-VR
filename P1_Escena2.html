@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+     <script src="https://unpkg.com/aframe-environment-component@1.0.0/dist/aframe-environment-component.min.js">  </script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets timeout="10000">
+          <img id="textura02" src="recursos/textura02.jpg">
+          <video id="video" autoplay loop="true" src="recursos/video.mp4">
+        </a-assets> 
+
+        <a-videosphere src="#video"></a-videosphere>
+
+        <a-text value="Atento al trafico!" color="white" position="0 3 -4" align = "center" scale="2 2 1"></a-text>
+        <a-text value="Mira hacia delante!" color="red" position="0 3 4" align = "center" rotation= "0 180 0" scale="2 2 1"></a-text>
+        <a-camera>
+
+        <a-cursor color="#FFFFFF"> </a-cursor>
+
+        </a-camera>
+
+
+    </a-scene>
+
+
+</body>
+
+
+</html>
